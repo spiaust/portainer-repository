@@ -3689,6 +3689,36 @@
       ]
     },
     {
+  "categories": ["Other", "Tools"],
+  "description": "FlareSolverr is a proxy server to bypass Cloudflare protection.",
+  "env": [
+    {
+      "default": "info",
+      "label": "LOG_LEVEL",
+      "name": "LOG_LEVEL"
+    },
+    {
+      "default": "America/New_York",
+      "label": "TZ",
+      "name": "TZ"
+    }
+  ],
+  "image": "ghcr.io/flaresolverr/flaresolverr:latest",
+  "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/flaresolverr.png",
+  "name": "flaresolverr",
+  "platform": "linux",
+  "ports": ["8191:8191"],
+  "restart_policy": "unless-stopped",
+  "title": "FlareSolverr",
+  "type": 1,
+  "volumes": [
+    {
+      "bind": "/portainer/Files/AppData/Config/FlareSolverr",
+      "container": "/config"
+    }
+  ]
+},
+    {
       "categories": ["Downloaders", "Books"],
       "description": "Readarr is an eBook and audiobook collection manager for Usenet and BitTorrent users. It watches for new books or audiobooks and when they are posted, it does its magic.",
       "env": [
